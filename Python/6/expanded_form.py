@@ -9,6 +9,5 @@ def expanded_form(num: int):
     return ' + '.join(result)
 
 
-
 if __name__ == '__main__':
     print(expanded_form(70304))
