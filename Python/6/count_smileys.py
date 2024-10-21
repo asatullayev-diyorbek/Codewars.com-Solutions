@@ -21,4 +21,4 @@ if __name__ == '__main__':
         ':~)', ':(', ';>', 
         ':D', ':~D', ':-C'
     ]
-    print(count_smileys(test_faces))  # result: 6
+    print(count_smileys(test_faces))  # result: 6 

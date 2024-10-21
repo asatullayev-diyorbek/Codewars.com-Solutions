@@ -10,4 +10,4 @@ def rgb(r, g, b):
 
 
 if __name__ == '__main__':
-    print(rgb(255, 255, 255))  # result: FFFFFF
+    print(rgb(255, 255, 255))  # result: FFFFFF 
