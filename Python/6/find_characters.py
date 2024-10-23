@@ -14,7 +14,8 @@ def find_characters(matrix: str):
 
     min_count = min(counter.values())
     min_chars = [
-        char for char, count in counter.items() \
+        char \
+        for char, count in counter.items() \
         if count == min_count
     ]
     if len(min_chars) == 1:
@@ -24,14 +25,10 @@ def find_characters(matrix: str):
 
 if __name__ == "__main__":
     test = '''\
-        3v652
-        1uwyt
-        v254v
-        t54tv
-        x45yx
-        s7x45
-        5402v
-        2x3xw
-        5w22v\
+        3v652\
+        1uwytv254vt54tv\
+        x45yxs7x455402v\
+        2x3xw5w22v\
     '''
     print(find_characters(test))
+    # result: su0167
