@@ -1,4 +1,3 @@
-import math
 def dashatize(n):
     n = str(n)
     n = n.strip('-')
@@ -13,7 +12,6 @@ def dashatize(n):
     return response
 
 
-
-
-
-print(dashatize(-790266962712808847))
+if __name__ == '__main__':
+    print(dashatize(-790266962712808847))
+    # result: 7-9-0266-9-62-7-1-280884-7

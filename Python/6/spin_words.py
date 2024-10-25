@@ -10,4 +10,6 @@ def spin_words(sentence):
     return s
 
 
-print(spin_words("Hey fellow warriors"))  # result: Hey wollef sroirraw
+if __name__ == '__main__':
+    print(spin_words("Hey fellow warriors"))
+    # result: Hey wollef sroirraw
