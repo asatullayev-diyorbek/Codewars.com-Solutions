@@ -1,19 +1,20 @@
-import math
-
-
 def polybius(st):
-    satr = ""
-    for i in st.upper():
-        if i.isalpha():
-            if i == "I" or i == "J":
-                satr += "24"
+    result = ""
+    for char in st.upper():
+        if char.isalpha():
+            if char in "IJ":
+                result += "24"
             else:
-                satr += "{0}{1}".format(str(math.ceil((ord(i) - 64 - ord(i) // 75) / 5)), (
-                    str(math.ceil((ord(i) - 64 - ord(i) // 75) % 5)) if math.ceil(
-                        (ord(i) - 64 - ord(i) // 75) % 5) != 0 else "5"))
+                val = ord(char) - 65
+                if char > "J":
+                    val -= 1
+                row = val // 5 + 1
+                col = val % 5 + 1
+                result += f"{row}{col}"
         else:
-            satr += i
-    return satr
+            result += char
+    return result
 
 
-print(polybius('POLYBIUS'))  # result: 3534315412244543
+if __name__ == '__main__':
+    print(polybius('POLYBIUS'))  # result: 3534315412244543
